@@ -16,9 +16,18 @@ public class OpenPath : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         
-        if(other.name == "Daruma")
+        if(other.tag == "Daruma")
         {
             StartCoroutine("Open");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Daruma")
+        {
+            //Set Animation to move back 
+            //Instantiate(door, transform.position, transform.rotation);
         }
     }
 }

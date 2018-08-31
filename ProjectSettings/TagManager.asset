@@ -8,6 +8,8 @@ TagManager:
   - KillZone
   - HallWayLvl
   - MusicLvl
+  - PencilCase
+  - Daruma
   layers:
   - Default
   - TransparentFX

@@ -27,7 +27,6 @@ public class PickUp : MonoBehaviour
         }
         else
         {
-            Debug.Log("Object Dropped");
             GetComponent<Rigidbody>().isKinematic = false;
             transform.SetParent(null);
         }
