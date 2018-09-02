@@ -1,14 +1,24 @@
 fileFormatVersion: 2
-guid: bb178df9bc0e13e48be03d5e618528cd
+guid: b8738bc7463e3fb4e94991dc55ba29ff
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Daruma2
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Daruma
+    100000: back
+    100002: //RootNode
+    100004: pCylinder1
+    400000: back
+    400002: //RootNode
+    400004: pCylinder1
+    2000000: back
+    2100000: blinn3
+    2100002: erasertop
+    2100004: lambert1
+    2100006: blinn4
+    2100008: blinn6
+    2100010: blinn5
+    2300000: pCylinder1
+    3300000: pCylinder1
+    4300000: pCylinder1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +50,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.2
+    globalScale: 4.5
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
