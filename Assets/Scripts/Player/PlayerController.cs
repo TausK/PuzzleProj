@@ -11,7 +11,7 @@ namespace movement
         
         public Orbit camOrbit;
 
-        public GameObject spawnPoint;
+        public Transform spawnPoint;
         public float speed = 0.5f;
         public float normSpeed = 0.5f;
         public float maxSpeed = 1f;
@@ -102,7 +102,10 @@ namespace movement
         }
         private void OnTriggerEnter(Collider other)
         {
-            
+            if(other.tag == "KillZone")
+            {
+                transform.position = spawnPoint.position;
+            }
         }
 
         void PickObject()
