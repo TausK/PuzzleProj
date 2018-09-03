@@ -7,9 +7,8 @@ namespace movement
 
     public class PlayerController : MonoBehaviour
     {
-        public movement.PlayerController controller;
-        public PickUp pick;
-
+        public PlayerController controller;
+        
         public Orbit camOrbit;
 
         public GameObject spawnPoint;
@@ -108,7 +107,8 @@ namespace movement
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, rayDist, layerMask))
             {
-                if (hit.collider.GetComponent<PickUp>())
+                PickUp pick = hit.collider.GetComponent<PickUp>();
+                if(pick)
                 {
                     Debug.Log("Object Found");
                     if (Input.GetKeyDown(KeyCode.E))

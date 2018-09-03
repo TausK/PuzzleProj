@@ -8,23 +8,13 @@ public class OpenPath : MonoBehaviour
     public Animator anim;
     public GameObject gate;
     public float delay = 0.5f;
-   // public bool isOpen;
-    private void Start()
-    {
-        anim.enabled = false;
-    }
-    IEnumerator Open()
-    {
-        yield return new WaitForSeconds(delay);
-        anim.enabled = true;
-    }
-
+   
     private void OnTriggerStay(Collider other)
     {
 
         if (other.tag == "Daruma")
         {
-            StartCoroutine("Open");
+            anim.SetBool("isOpen", true);
         }
 
 
@@ -32,14 +22,11 @@ public class OpenPath : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-
         if (other.tag == "Daruma")
         {
-            //anim.SetBool("IsOpen", false);
+            anim.SetBool("isOpen", false);
             //Set Animation to move back 
             //Instantiate(door, transform.position, transform.rotation);
         }
-
-
     }
 }

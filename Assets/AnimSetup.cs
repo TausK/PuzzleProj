@@ -8,7 +8,7 @@ public class AnimSetup : MonoBehaviour
 
     private void Start()
     {
-        anim = this.GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
 

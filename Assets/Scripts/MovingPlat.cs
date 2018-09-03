@@ -19,9 +19,9 @@ public class MovingPlat : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 currentPos = Vector3.Lerp(start.position, end.position, Mathf.Cos(Time.time / MoveTime * Mathf.PI * 2) * -.5f + .5f);
-     
-        rb.MovePosition(currentPos);
-        
+
+        //rb.MovePosition(currentPos);
+        transform.position = currentPos;
     }
 
     private void OnTriggerEnter(Collider other)
