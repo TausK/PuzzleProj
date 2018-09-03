@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 50f216da3dc29a44995f373a556aa553
   - enabled: 1
-    path: Assets/Scenes/Puzzle1.unity
-    guid: 94fd812880bd10f4a89f666879215b4f
-  - enabled: 1
-    path: Assets/Scenes/HallWay.unity
-    guid: 5bc0dc6d403c75540b258448b05f4aaf
-  - enabled: 1
-    path: Assets/Scenes/Puzzle2.unity
-    guid: 3c191ff71060ebc43ae2e475db5d75bd
+    path: Assets/Scenes/Lvl1Test.unity
+    guid: 2ee6b6cb794eed84ba51ce570b4e7b1a
   m_configObjects: {}

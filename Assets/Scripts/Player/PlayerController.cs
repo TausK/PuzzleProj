@@ -100,6 +100,10 @@ namespace movement
             moveDirection.y -= gravityScale * Time.deltaTime;
             charC.Move(moveDirection * Time.deltaTime);
         }
+        private void OnTriggerEnter(Collider other)
+        {
+            
+        }
 
         void PickObject()
         {

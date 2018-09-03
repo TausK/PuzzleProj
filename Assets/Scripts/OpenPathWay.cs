@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class OpenPath : MonoBehaviour
+public class OpenPathWay : MonoBehaviour
 {
     public Animator anim;
     public GameObject gate;
+    public GameObject panel;
     public float delay = 0.5f;
    
     private void OnTriggerStay(Collider other)
@@ -15,6 +16,7 @@ public class OpenPath : MonoBehaviour
         if (other.tag == "Daruma")
         {
             anim.SetBool("isOpen", true);
+            panel.SetActive(true);
         }
 
 
@@ -25,8 +27,6 @@ public class OpenPath : MonoBehaviour
         if (other.tag == "Daruma")
         {
             anim.SetBool("isOpen", false);
-            //Set Animation to move back 
-            //Instantiate(door, transform.position, transform.rotation);
         }
     }
 }
