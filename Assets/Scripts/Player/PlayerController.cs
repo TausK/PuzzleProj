@@ -8,7 +8,8 @@ namespace movement
     public class PlayerController : MonoBehaviour
     {
         public PlayerController controller;
-        
+        public GameObject rayCastPost;
+
         public Orbit camOrbit;
 
         public Transform spawnPoint;
@@ -20,7 +21,7 @@ namespace movement
         private bool isRunning = false;
 
         public float rayDist = 1f;
-        public LayerMask layerMask;
+        // public LayerMask layerMask;
         //Default movement vector3 to 0
         private Vector3 moveDirection = Vector3.zero;
         public Transform cam;
@@ -38,7 +39,7 @@ namespace movement
         void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, transform.position + transform.forward * rayDist);
+            Gizmos.DrawLine(rayCastPost.transform.position, rayCastPost.transform.position + transform.forward * rayDist);
         }
 
         // Update is called once per frame
@@ -102,7 +103,7 @@ namespace movement
         }
         private void OnTriggerEnter(Collider other)
         {
-            if(other.tag == "KillZone")
+            if (other.tag == "KillZone")
             {
                 transform.position = spawnPoint.position;
             }
@@ -110,25 +111,72 @@ namespace movement
 
         void PickObject()
         {
-            Ray ray = new Ray(transform.position, transform.forward);
+
+            Ray ray = new Ray(rayCastPost.transform.position, transform.forward);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, rayDist, layerMask))
+            if (Physics.Raycast(ray, out hit, rayDist))
             {
                 PickUp pick = hit.collider.GetComponent<PickUp>();
-                if(pick)
+                TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
+                if (pick != null)
                 {
-                    Debug.Log("Object Found");
+                    //Debug.Log("Object Found");
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        Debug.Log("Object Picked");
+                        //Debug.Log("Object Picked");
                         pick.picked = true;
+
                     }
                     if (Input.GetMouseButtonDown(0))
                     {
-                        Debug.Log("ItemDropped");
+                        // Debug.Log("ItemDropped");
                         pick.picked = false;
                     }
                 }
+
+                if (metPlat != null)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        metPlat.actiSwitch = true;
+                    }
+                }
+                //}
+                //if (Physics.Raycast(ray, out hit, rayDist, layerMask))
+                //{
+                //    PickUp pick = hit.collider.GetComponent<PickUp>();
+                //    TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
+                //    if (pick)
+                //    {
+                //        //Debug.Log("Object Found");
+                //        if (Input.GetKeyDown(KeyCode.E))
+                //        {
+                //            //Debug.Log("Object Picked");
+                //            pick.picked = true;
+
+                //        }
+                //        if (Input.GetMouseButtonDown(0))
+                //        {
+                //           // Debug.Log("ItemDropped");
+                //            pick.picked = false;
+                //        }
+                //    }
+
+                //    if (metPlat != null)
+                //    {
+                //        if (Input.GetKeyDown(KeyCode.E))
+                //        {
+                //            metPlat.actiSwitch = true;
+                //        }
+                //    }
+                //else if(hit.collider.name == "Lever")
+                //{
+                //    if (Input.GetKeyDown(KeyCode.E))
+                //    {
+                //        metPlat.actiSwitch = true;
+                //    }
+                //}
+
             }
         }
     }

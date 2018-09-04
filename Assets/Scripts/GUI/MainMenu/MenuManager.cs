@@ -14,7 +14,10 @@ public class MenuManager : MonoBehaviour
     }
     public void Play()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(1);
+        
     }
 
     public void Exit()
