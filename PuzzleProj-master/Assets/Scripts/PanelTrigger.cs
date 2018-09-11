@@ -7,7 +7,7 @@ public class PanelTrigger : MonoBehaviour
     public GameObject dynoPlat;
     public GameObject panel;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Daruma")
         {

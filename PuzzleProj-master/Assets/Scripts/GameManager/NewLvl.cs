@@ -5,11 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class NewLvl : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public float delay = 2f;
+
+    IEnumerator WaitBeforeLoad()
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(0);
+    }
+    private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Daruma")
         {
-            SceneManager.LoadScene(0);
+            StartCoroutine("WaitBeforeLoad");          
         }
     }
 
