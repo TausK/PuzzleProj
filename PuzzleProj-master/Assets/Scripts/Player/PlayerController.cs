@@ -20,6 +20,7 @@ namespace movement
         public float gravityScale = 20;
         public float jumpForce = 10;
         private bool isRunning = false;
+        public float delay = 0.2f;
 
         public float rayDist = 1f;
         // public LayerMask layerMask;
@@ -34,7 +35,6 @@ namespace movement
         // Use this for initialization
         void Start()
         {
-
             origin = transform.position;
             charC = this.GetComponent<CharacterController>();
             Cursor.visible = false;
@@ -64,6 +64,11 @@ namespace movement
 
         }
 
+        IEnumerator JumpDelay()
+        {
+            yield return new WaitForSeconds(delay);
+        }
+
         void PlayerMovement()
         {
             float h = Input.GetAxis("Horizontal");
@@ -88,7 +93,8 @@ namespace movement
                 {
                     //Apply jump force in y axis upon character
                     moveDirection.y = jumpForce;
-
+                   // StartCoroutine("JumpDelay");
+                    Debug.Log(delay * Time.deltaTime);
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift))
@@ -99,11 +105,9 @@ namespace movement
                 {
                     speed = normSpeed;
                 }
-
-
-
             }
             moveDirection.y -= gravityScale * Time.deltaTime;
+            
             charC.Move(moveDirection * Time.deltaTime);
         }
 
