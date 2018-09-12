@@ -27,6 +27,7 @@ public class OpenPathWay : MonoBehaviour
         if (other.tag == "Daruma")
         {
             anim.SetBool("isOpen", false);
+            //panel.SetActive(false);
         }
     }
 }

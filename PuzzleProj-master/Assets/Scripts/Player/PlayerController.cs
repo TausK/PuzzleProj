@@ -93,7 +93,7 @@ namespace movement
                 {
                     //Apply jump force in y axis upon character
                     moveDirection.y = jumpForce;
-                   // StartCoroutine("JumpDelay");
+                    // StartCoroutine("JumpDelay");
                     Debug.Log(delay * Time.deltaTime);
                 }
 
@@ -107,7 +107,7 @@ namespace movement
                 }
             }
             moveDirection.y -= gravityScale * Time.deltaTime;
-            
+
             charC.Move(moveDirection * Time.deltaTime);
         }
 
@@ -121,34 +121,52 @@ namespace movement
             {
                 pick = hit.collider.GetComponent<PickUp>();
                 TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
-                if (pick != null)
+
+
+
+                //Debug.Log("Object Found");
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-
-                    //Debug.Log("Object Found");
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if(pick != null)
                     {
-                        //Debug.Log("Object Picked");
-                        pick.picked = true;
-
-
+                        ////Debug.Log("Object Picked");
+                        //pick.picked = true;
+                        if (pick.picked == false)
+                        {
+                            pick.picked = true;
+                        }
+                        else
+                        {
+                            pick.picked = false;
+                        }
                     }
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        // Debug.Log("ItemDropped");
-                        pick.picked = false;
-
-                    }
-                }
-
-                if (metPlat != null)
-
-                {
-
-                    if (Input.GetKeyDown(KeyCode.E))
+                    
+                    if (metPlat != null)
                     {
                         metPlat.actiSwitch = true;
                     }
                 }
+
+
+
+                //if (Input.GetMouseButtonDown(0))
+                //{
+                //    // Debug.Log("ItemDropped");
+                //    pick.picked = false;
+
+                //}
+
+
+
+                //if (Input.GetKeyDown(KeyCode.E))
+                //{
+                //    if (metPlat.actiSwitch)
+                //    {
+                //        metPlat.actiSwitch = true;
+                //    }
+                    
+                //}
+
 
 
             }
