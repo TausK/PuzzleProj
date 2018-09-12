@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   picked: 0
+  uiPick: 0
 --- !u!114 &114844305956888660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,6 +140,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
-  daruma: {fileID: 0}
+  daruma: {fileID: 1332246768204226}
   delaySpawn: 0.5
-  pick: {fileID: 0}
