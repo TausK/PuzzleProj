@@ -9,7 +9,7 @@ namespace movement
     {
         public PlayerController controller;
         public GameObject rayCastPost;
-
+        public PickUI ui;
         public Orbit camOrbit;
 
         public Vector3 origin;
@@ -35,6 +35,7 @@ namespace movement
         // Use this for initialization
         void Start()
         {
+            ui = GetComponent<PickUI>();
             origin = transform.position;
             charC = this.GetComponent<CharacterController>();
             Cursor.visible = false;
@@ -121,19 +122,15 @@ namespace movement
             {
                 pick = hit.collider.GetComponent<PickUp>();
                 TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
-
-
-
+                ui.pickUI = true;
                 //Debug.Log("Object Found");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     if(pick != null)
-                    {
-                        ////Debug.Log("Object Picked");
-                        //pick.picked = true;
+                    {                    
                         if (pick.picked == false)
                         {
-                            pick.picked = true;
+                            pick.picked = true;  
                         }
                         else
                         {
@@ -147,33 +144,12 @@ namespace movement
                     }
                 }
 
-
-
-                //if (Input.GetMouseButtonDown(0))
-                //{
-                //    // Debug.Log("ItemDropped");
-                //    pick.picked = false;
-
-                //}
-
-
-
-                //if (Input.GetKeyDown(KeyCode.E))
-                //{
-                //    if (metPlat.actiSwitch)
-                //    {
-                //        metPlat.actiSwitch = true;
-                //    }
-                    
-                //}
-
-
-
             }
-
+            else
+            {
+                ui.pickUI = false;
+            }
         }
-
-
     }
 }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -776,11 +776,11 @@ Prefab:
     - target: {fileID: 65536383646318260, guid: 4f94481337256184fb74c17c2b180d10,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1436265267974150, guid: 4f94481337256184fb74c17c2b180d10, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: KillZone
       objectReference: {fileID: 0}
     - target: {fileID: 4929314066669698, guid: 4f94481337256184fb74c17c2b180d10, type: 2}
       propertyPath: m_LocalScale.x
@@ -1078,7 +1078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &409345736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,6 +1590,11 @@ Prefab:
     - target: {fileID: 4892745720244200, guid: 039251168c3b86a4789dc09ce95da0de, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114403450854261032, guid: 039251168c3b86a4789dc09ce95da0de,
+        type: 2}
+      propertyPath: ChooseLvl
+      value: Puzzle_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 039251168c3b86a4789dc09ce95da0de, type: 2}
@@ -2311,11 +2316,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.094
+      value: -4.095
       objectReference: {fileID: 0}
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.815
+      value: 0.782
       objectReference: {fileID: 0}
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2323,19 +2328,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.03857164
       objectReference: {fileID: 0}
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.722409
+      value: 0.72128415
       objectReference: {fileID: 0}
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.040297728
       objectReference: {fileID: 0}
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.6914661
+      value: 0.69038945
       objectReference: {fileID: 0}
     - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_RootOrder
@@ -2361,6 +2366,10 @@ Prefab:
     - target: {fileID: 1332246768204226, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_Name
       value: LV1_Daruma_R (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456623653851624, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -6.3960004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb16259293a236a498831fb7dbe3582c, type: 2}

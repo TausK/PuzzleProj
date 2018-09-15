@@ -6,18 +6,31 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-
+    public GameObject firstPanel;
+    public GameObject secondPanel;
     private void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
-    public void Play()
+    public void OK()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(1);
-        
+    }
+
+    public void Play()
+    {
+        firstPanel.SetActive(false);
+        secondPanel.SetActive(true);
+
+    }
+
+    public void Back()
+    {
+        firstPanel.SetActive(true);
+        secondPanel.SetActive(false);
     }
 
     public void Exit()

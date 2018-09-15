@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class NewLvl : MonoBehaviour
 {
     public float delay = 2f;
-
+    public string ChooseLvl;
     IEnumerator WaitBeforeLoad()
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(ChooseLvl);
     }
     private void OnTriggerStay(Collider other)
     {
