@@ -30,31 +30,33 @@ public class MovingPlat : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.tag == "Player" ||other.tag ==  " Daruma")
         {
-            player.transform.parent = transform;
+            other.transform.parent = transform;
         }
 
+        //if (other.tag == "Daruma")
+        //{
+        //    other.transform.parent = transform;
+        //}
     }
-
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (other.gameObject.tag == "Daruma")
-    //    {
-    //        gameObject.transform.parent = transform;
-    //    }
-    //}
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
-        {
-            player.transform.parent = null;
-        }
 
-        //if (other.gameObject.tag == "Daruma")
+        if (other.tag == "Player" || other.tag == " Daruma")
+        {
+            other.transform.parent = null;
+        }
+        //if (other.tag == "Player")
         //{
-        //    gameObject.transform.parent = null;
+        //    other.transform.parent = null;
+        //}
+
+
+        //if (other.tag == "Daruma")
+        //{
+        //    other.transform.parent = null;
         //}
     }
 }

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114588115800100064}
   - component: {fileID: 114844305956888660}
   - component: {fileID: 65189620866629664}
+  - component: {fileID: 136590099732774212}
   m_Layer: 10
   m_Name: LV1_Daruma_R
   m_TagString: Daruma
@@ -90,7 +91,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 4497b74667ba5f9419a1d995cc9adeb1, type: 2}
+  - {fileID: 2100000, guid: f9da4fb5b15e8074fb5d6274db4306f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,7 +131,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65189620866629664
 BoxCollider:
@@ -140,7 +141,7 @@ BoxCollider:
   m_GameObject: {fileID: 1332246768204226}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 12.671619, y: 14.480169, z: 9.409516}
   m_Center: {x: -0.06975484, y: -2.171668, z: 0.00000047683716}
@@ -206,6 +207,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c9c5d89ae2dc641bdd264cc1f2f17a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  daruma: {fileID: 1332246768204226}
+  origin: {x: 0, y: 0, z: 0}
   delaySpawn: 0.5
+--- !u!136 &136590099732774212
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332246768204226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 6.3358097
+  m_Height: 14.480169
+  m_Direction: 1
+  m_Center: {x: -0.06975484, y: -2.171668, z: 0.00000047579772}

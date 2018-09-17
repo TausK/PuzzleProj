@@ -9,7 +9,7 @@ namespace movement
     {
         public PlayerController controller;
         public GameObject rayCastPost;
-        public PickUI ui;
+        private PickUI ui;
         public Orbit camOrbit;
 
         public Vector3 origin;
@@ -45,7 +45,8 @@ namespace movement
         void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(rayCastPost.transform.position, rayCastPost.transform.position + transform.forward * rayDist);
+            Vector3 forward = Camera.main.transform.forward;
+            Gizmos.DrawLine(rayCastPost.transform.position, rayCastPost.transform.position + forward * rayDist);
         }
 
         // Update is called once per frame
@@ -65,6 +66,7 @@ namespace movement
 
         }
 
+
         IEnumerator JumpDelay()
         {
             yield return new WaitForSeconds(delay);
@@ -79,6 +81,7 @@ namespace movement
             Vector3 euler = cam.transform.eulerAngles;
             transform.rotation = Quaternion.AngleAxis(euler.y, Vector3.up);
 
+            print(charC.isGrounded);
             ////if character is grounded then...
             if (charC.isGrounded)
             {
@@ -107,35 +110,30 @@ namespace movement
                     speed = normSpeed;
                 }
             }
+            //else
+            //{
+            //    moveDirection.y -= gravityScale * Time.deltaTime;
+            //}
             moveDirection.y -= gravityScale * Time.deltaTime;
-
             charC.Move(moveDirection * Time.deltaTime);
         }
 
         void PickObject()
         {
-
-            Ray ray = new Ray(rayCastPost.transform.position, transform.forward);
+            //Ray rayCam = new Ray()
+            Ray ray = new Ray(rayCastPost.transform.position, Camera.main.transform.forward);
             RaycastHit hit;
             PickUp pick;
             if (Physics.Raycast(ray, out hit, rayDist))
             {
                 pick = hit.collider.GetComponent<PickUp>();
                 TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
-                ui.pickUI = true;
                 //Debug.Log("Object Found");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     if(pick != null)
-                    {                    
-                        if (pick.picked == false)
-                        {
-                            pick.picked = true;  
-                        }
-                        else
-                        {
-                            pick.picked = false;
-                        }
+                    {
+                        pick.picked = !pick.picked;
                     }
                     
                     if (metPlat != null)
@@ -143,7 +141,8 @@ namespace movement
                         metPlat.actiSwitch = true;
                     }
                 }
-
+                
+                ui.pickUI = !pick.picked;
             }
             else
             {

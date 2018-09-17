@@ -11,6 +11,10 @@ public class KillZone : MonoBehaviour
             other.transform.position = other.transform.GetComponent<movement.PlayerController>().origin;
            
         }
+        if(other.tag == "Daruma")
+        {
+            other.transform.position = other.transform.GetComponent<ReSpawn>().origin;
+        }
     }
 
 }
