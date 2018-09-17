@@ -123,25 +123,29 @@ namespace movement
             //Ray rayCam = new Ray()
             Ray ray = new Ray(rayCastPost.transform.position, Camera.main.transform.forward);
             RaycastHit hit;
-            PickUp pick;
+            //   PickUp pick;
             if (Physics.Raycast(ray, out hit, rayDist))
             {
-                pick = hit.collider.GetComponent<PickUp>();
+
+                PickUp pick = hit.collider.GetComponent<PickUp>();
                 TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
+
                 //Debug.Log("Object Found");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if(pick != null)
+                    if (pick != null)
                     {
                         pick.picked = !pick.picked;
+
+
                     }
-                    
+
                     if (metPlat != null)
                     {
-                        metPlat.actiSwitch = true;
+                        metPlat.actiSwitch = !metPlat.actiSwitch;
                     }
                 }
-                
+
                 ui.pickUI = !pick.picked;
             }
             else
