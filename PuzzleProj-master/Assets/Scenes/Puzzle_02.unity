@@ -444,7 +444,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1261564633855720, guid: 55ec5c845b8f52d4293f60c6dd85f6bc, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 33584972000589484, guid: 55ec5c845b8f52d4293f60c6dd85f6bc,
         type: 2}
@@ -2917,7 +2917,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 5879dd13658d3924994d3bd579a5ec34, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 5879dd13658d3924994d3bd579a5ec34, type: 3}
       propertyPath: m_TagString
@@ -4257,7 +4257,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.078437634, y: 6.8674364, z: 1}
+    m_Scale: {x: 0.078437634, y: 6.8674364, z: 0.43115187}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -8166,7 +8166,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883941997}
   m_LocalRotation: {x: -0.5019196, y: -0.4980729, z: 0.498073, w: 0.5019196}
-  m_LocalPosition: {x: 7.8733, y: 0.041028, z: 0.050833}
+  m_LocalPosition: {x: 8.2, y: 0.52, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
