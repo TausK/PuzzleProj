@@ -26,6 +26,7 @@ public class PickUp : MonoBehaviour
             
             GetComponent<Rigidbody>().isKinematic = true;
             transform.SetParent(player);
+            
 
         }
         else

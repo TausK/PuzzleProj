@@ -24,8 +24,7 @@ GameObject:
   - component: {fileID: 54854586634090252}
   - component: {fileID: 114588115800100064}
   - component: {fileID: 114844305956888660}
-  - component: {fileID: 65189620866629664}
-  - component: {fileID: 136590099732774212}
+  - component: {fileID: 65549157369147018}
   m_Layer: 10
   m_Name: LV1_Daruma_R
   m_TagString: Daruma
@@ -131,9 +130,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
---- !u!65 &65189620866629664
+--- !u!65 &65549157369147018
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,10 +140,10 @@ BoxCollider:
   m_GameObject: {fileID: 1332246768204226}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.671619, y: 14.480169, z: 9.409516}
-  m_Center: {x: -0.06975484, y: -2.171668, z: 0.00000047683716}
+  m_Size: {x: 10.559683, y: 12.066808, z: 7.841264}
+  m_Center: {x: -0.058129072, y: -1.8097234, z: 0.00000023755238}
 --- !u!108 &108098239739497144
 Light:
   m_ObjectHideFlags: 1
@@ -193,9 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ad2cbb5f4c3614a96a91eb6ea3ac16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
   picked: 0
-  uiPick: 0
 --- !u!114 &114844305956888660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,16 +208,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origin: {x: 0, y: 0, z: 0}
   delaySpawn: 0.5
---- !u!136 &136590099732774212
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1332246768204226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 6.3358097
-  m_Height: 14.480169
-  m_Direction: 1
-  m_Center: {x: -0.06975484, y: -2.171668, z: 0.00000047579772}
+  pick: {fileID: 0}

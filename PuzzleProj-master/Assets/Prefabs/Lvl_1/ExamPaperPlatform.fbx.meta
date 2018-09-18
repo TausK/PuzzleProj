@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: bb178df9bc0e13e48be03d5e618528cd
+guid: f54726515e7d1bc4e8295ff35389a9c7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Daruma2
+    2100000: ExamPaper1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Daruma
+    4300000: Exam_Paper
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.15
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

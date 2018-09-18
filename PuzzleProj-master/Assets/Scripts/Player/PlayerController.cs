@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 namespace movement
 {
 
@@ -9,7 +10,7 @@ namespace movement
     {
         public PlayerController controller;
         public GameObject rayCastPost;
-        private PickUI ui;
+        public PickUI ui;
         public Orbit camOrbit;
 
         public Vector3 origin;
@@ -19,7 +20,6 @@ namespace movement
         public float maxSpeed = 1f;
         public float gravityScale = 20;
         public float jumpForce = 10;
-        private bool isRunning = false;
         public float delay = 0.2f;
 
         public float rayDist = 1f;
@@ -29,7 +29,7 @@ namespace movement
         public Transform cam;
         // private Rigidbody rb;
         private CharacterController charC;
-
+        EventSystem e;
 
 
         // Use this for initialization
@@ -37,7 +37,7 @@ namespace movement
         {
             ui = GetComponent<PickUI>();
             origin = transform.position;
-            charC = this.GetComponent<CharacterController>();
+            charC = GetComponent<CharacterController>();
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -126,7 +126,6 @@ namespace movement
             //   PickUp pick;
             if (Physics.Raycast(ray, out hit, rayDist))
             {
-
                 PickUp pick = hit.collider.GetComponent<PickUp>();
                 TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
 
@@ -136,8 +135,6 @@ namespace movement
                     if (pick != null)
                     {
                         pick.picked = !pick.picked;
-
-
                     }
 
                     if (metPlat != null)
@@ -145,7 +142,6 @@ namespace movement
                         metPlat.actiSwitch = !metPlat.actiSwitch;
                     }
                 }
-
                 ui.pickUI = !pick.picked;
             }
             else

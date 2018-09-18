@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: bb178df9bc0e13e48be03d5e618528cd
+guid: 216aa2de3d052f64592d22c293b62b5c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Daruma2
+    2100000: wall
+    2100002: Frames
+    2100004: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Daruma
+    4300000: WallWindow_Hallway1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +42,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.15
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

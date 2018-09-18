@@ -6,7 +6,7 @@ public class ReSpawn : MonoBehaviour
 {
     public Vector3 origin;
     public float delaySpawn = 0.5f;
-    private PickUp pick;
+    public PickUp pick;
 
 
     private void Start()
