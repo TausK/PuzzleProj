@@ -67,10 +67,10 @@ namespace movement
         }
 
 
-        IEnumerator JumpDelay()
-        {
-            yield return new WaitForSeconds(delay);
-        }
+        //IEnumerator JumpDelay()
+        //{
+        //    yield return new WaitForSeconds(delay);
+        //}
 
         void PlayerMovement()
         {
@@ -81,11 +81,10 @@ namespace movement
             Vector3 euler = cam.transform.eulerAngles;
             transform.rotation = Quaternion.AngleAxis(euler.y, Vector3.up);
 
-            print(charC.isGrounded);
             ////if character is grounded then...
             if (charC.isGrounded)
             {
-                Debug.Log(charC.isGrounded);
+                //Debug.Log(charC.isGrounded);
                 moveDirection = new Vector3(h, 0, v);
                 //Move character within world space
                 moveDirection = transform.TransformDirection(moveDirection);
@@ -98,7 +97,7 @@ namespace movement
                     //Apply jump force in y axis upon character
                     moveDirection.y = jumpForce;
                     // StartCoroutine("JumpDelay");
-                    Debug.Log(delay * Time.deltaTime);
+                    // Debug.Log(delay * Time.deltaTime);
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift))
@@ -116,6 +115,7 @@ namespace movement
             //}
             moveDirection.y -= gravityScale * Time.deltaTime;
             charC.Move(moveDirection * Time.deltaTime);
+            // Debug.Log(charC.isGrounded);
         }
 
         void PickObject()

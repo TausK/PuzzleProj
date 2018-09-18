@@ -33875,8 +33875,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &1904090150 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4717933188788676, guid: caf580a1148254546b2e0f8f066b0a30,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1904090149}
 --- !u!1 &1907385240
 GameObject:
@@ -34273,8 +34272,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &1929175726 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4717933188788676, guid: caf580a1148254546b2e0f8f066b0a30,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1929175725}
 --- !u!1 &1931978267
 GameObject:
