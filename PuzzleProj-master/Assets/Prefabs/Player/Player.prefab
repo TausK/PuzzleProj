@@ -41,13 +41,14 @@ GameObject:
   - component: {fileID: 23594826931893280}
   - component: {fileID: 143652509419053180}
   - component: {fileID: 114155131129927090}
+  - component: {fileID: 114921214593595556}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1840969508654200
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261564633855720}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: -6.928, y: 1.8542, z: 0.29236}
+  m_LocalPosition: {x: 8.92, y: 1.292, z: 1.426}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 4570910589376804}
@@ -206,13 +207,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 114155131129927090}
   rayCastPost: {fileID: 1840969508654200}
+  ui: {fileID: 0}
   camOrbit: {fileID: 114314003895376476}
-  spawnPoint: {fileID: 0}
+  origin: {x: 0, y: 0, z: 0}
   speed: 0.5
   normSpeed: 0.5
   maxSpeed: 1
   gravityScale: 3
   jumpForce: 1
+  delay: 0.2
   rayDist: 0.07
   cam: {fileID: 4570910589376804}
 --- !u!114 &114314003895376476
@@ -241,6 +244,18 @@ MonoBehaviour:
   ignoreLayers:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &114921214593595556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261564633855720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd77f26a77d9a81419da28e069d93d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUI: 0
 --- !u!143 &143652509419053180
 CharacterController:
   m_ObjectHideFlags: 1
