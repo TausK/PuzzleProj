@@ -93,6 +93,15 @@ namespace movement
                 //Add speed to vector direction
                 moveDirection *= speed;
 
+                if (h >= 0.1 || h <= -0.1 || v >= 0.1 || v <= -0.1)
+                {
+                    anim.SetBool("isWalking", true);
+                }
+                else
+                {
+                    anim.SetBool("isWalking", false);
+                }
+
                 //if input key is pressed then....
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
@@ -105,17 +114,16 @@ namespace movement
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     speed = maxSpeed;
-                    anim.GetBool("isRunning");
+                    anim.SetBool("isRunning", true);
+                    anim.SetBool("isWalking", false);
                 }
                 else
                 {
                     speed = normSpeed;
+                    anim.SetBool("isRunning", false);
                 }
+               
             }
-            //else
-            //{
-            //    moveDirection.y -= gravityScale * Time.deltaTime;
-            //}
             moveDirection.y -= gravityScale * Time.deltaTime;
             charC.Move(moveDirection * Time.deltaTime);
             // Debug.Log(charC.isGrounded);
@@ -145,7 +153,7 @@ namespace movement
                         metPlat.actiSwitch = !metPlat.actiSwitch;
                     }
                 }
-                ui.pickUI = !pick.picked;
+                //ui.pickUI = !pick.picked;
             }
             else
             {

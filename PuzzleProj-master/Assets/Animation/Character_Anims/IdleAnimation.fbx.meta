@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: f510c65c837b7024e960d840d554b63b
+guid: 1d921844498d6d84d9d49bf633d81b42
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Bow1
-    100002: //RootNode
-    100004: Face
-    100006: Glasses1
-    100008: Hair2
-    100010: Hair_Bowl
-    100012: HandLeft
-    100014: HandRight
+    100002: Face
+    100004: Glasses1
+    100006: Hair2
+    100008: Hair_Bowl
+    100010: HandLeft
+    100012: HandRight
+    100014: //RootNode
     100016: Jacket1
     100018: Legs
     100020: polySurface6
@@ -83,13 +83,13 @@ ModelImporter:
     100154: ShoeRight
     100156: Skirt
     400000: Bow1
-    400002: //RootNode
-    400004: Face
-    400006: Glasses1
-    400008: Hair2
-    400010: Hair_Bowl
-    400012: HandLeft
-    400014: HandRight
+    400002: Face
+    400004: Glasses1
+    400006: Hair2
+    400008: Hair_Bowl
+    400010: HandLeft
+    400012: HandRight
+    400014: //RootNode
     400016: Jacket1
     400018: Legs
     400020: polySurface6
@@ -227,7 +227,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
