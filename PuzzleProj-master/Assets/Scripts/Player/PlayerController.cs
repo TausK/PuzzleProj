@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.Animations;
 namespace movement
 {
 
@@ -12,7 +13,7 @@ namespace movement
         public GameObject rayCastPost;
         public PickUI ui;
         public Orbit camOrbit;
-
+        public Animator anim;
         public Vector3 origin;
 
         public float speed = 0.5f;
@@ -35,6 +36,7 @@ namespace movement
         // Use this for initialization
         void Start()
         {
+            anim = GetComponent<Animator>();
             ui = GetComponent<PickUI>();
             origin = transform.position;
             charC = GetComponent<CharacterController>();
@@ -103,6 +105,7 @@ namespace movement
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     speed = maxSpeed;
+                    anim.GetBool("isRunning");
                 }
                 else
                 {

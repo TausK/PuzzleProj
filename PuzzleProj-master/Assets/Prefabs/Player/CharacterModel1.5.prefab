@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 114071032671882526}
   - component: {fileID: 114426555226587008}
   m_Layer: 12
-  m_Name: CharacterModel
+  m_Name: CharacterModel1.5
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -820,6 +820,7 @@ MonoBehaviour:
   rayCastPost: {fileID: 1396913322629850}
   ui: {fileID: 0}
   camOrbit: {fileID: 114342845027530620}
+  anim: {fileID: 0}
   origin: {x: 0, y: 0, z: 0}
   speed: 0.5
   normSpeed: 0.5
