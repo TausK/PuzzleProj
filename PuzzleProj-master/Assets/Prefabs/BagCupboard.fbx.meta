@@ -1,89 +1,14 @@
 fileFormatVersion: 2
-guid: 0834c04a8d8ce934da4452b033114304
+guid: 7993c933b281b9949bacafdcee098fe0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bow1
-    100002: //RootNode
-    100004: Face
-    100006: Glasses1
-    100008: Hair2
-    100010: Hair_Bowl
-    100012: HandLeft
-    100014: HandRight
-    100016: Jacket1
-    100018: Legs
-    100020: polySurface6
-    100022: ShirtUnder
-    100024: Shoe_Left
-    100026: ShoeRight
-    100028: Skirt
-    400000: Bow1
-    400002: //RootNode
-    400004: Face
-    400006: Glasses1
-    400008: Hair2
-    400010: Hair_Bowl
-    400012: HandLeft
-    400014: HandRight
-    400016: Jacket1
-    400018: Legs
-    400020: polySurface6
-    400022: ShirtUnder
-    400024: Shoe_Left
-    400026: ShoeRight
-    400028: Skirt
-    2100000: SHOES
-    2100002: Shirt
-    2100004: Jacket2
-    2100006: Ribbon
-    2100008: Skirt1
-    2100010: Hair
-    2100012: Face1
-    2100014: Legs1
-    2100016: Glasses2
-    2100018: Hairs
-    2300000: Bow1
-    2300002: Face
-    2300004: Glasses1
-    2300006: Hair2
-    2300008: Hair_Bowl
-    2300010: HandLeft
-    2300012: HandRight
-    2300014: Jacket1
-    2300016: Legs
-    2300018: ShirtUnder
-    2300020: Shoe_Left
-    2300022: ShoeRight
-    2300024: Skirt
-    3300000: Bow1
-    3300002: Face
-    3300004: Glasses1
-    3300006: Hair2
-    3300008: Hair_Bowl
-    3300010: HandLeft
-    3300012: HandRight
-    3300014: Jacket1
-    3300016: Legs
-    3300018: ShirtUnder
-    3300020: Shoe_Left
-    3300022: ShoeRight
-    3300024: Skirt
-    4300000: Shoe_Left
-    4300002: ShirtUnder
-    4300004: Jacket1
-    4300006: Bow1
-    4300008: Skirt
-    4300010: Hair_Bowl
-    4300012: HandLeft
-    4300014: HandRight
-    4300016: Legs
-    4300018: Face
-    4300020: ShoeRight
-    4300022: Glasses1
-    4300024: Hair2
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Bagcupboard_BagCupboard
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Bagcupboard:BagCupboard1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -104,7 +29,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -135,8 +60,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -158,10 +83,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

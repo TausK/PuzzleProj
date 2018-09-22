@@ -97,18 +97,13 @@ namespace movement
                 {
                     anim.SetBool("isWalking", true);
                 }
-                else
-                {
-                    anim.SetBool("isWalking", false);
-                }
 
                 //if input key is pressed then....
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     //Apply jump force in y axis upon character
                     moveDirection.y = jumpForce;
-                    // StartCoroutine("JumpDelay");
-                    // Debug.Log(delay * Time.deltaTime);
+                    anim.SetBool("isJumping", true);
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift))
@@ -122,8 +117,15 @@ namespace movement
                     speed = normSpeed;
                     anim.SetBool("isRunning", false);
                 }
-               
+
             }
+            else
+            {
+                anim.SetBool("isWalking", false);
+                anim.SetBool("isJumping", false);
+                anim.SetBool("isRunning", false);
+            }
+
             moveDirection.y -= gravityScale * Time.deltaTime;
             charC.Move(moveDirection * Time.deltaTime);
             // Debug.Log(charC.isGrounded);
