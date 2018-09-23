@@ -30,7 +30,8 @@ namespace movement
         public Transform cam;
         // private Rigidbody rb;
         private CharacterController charC;
-        EventSystem e;
+
+        public bool grounded;
 
 
         // Use this for initialization
@@ -86,7 +87,7 @@ namespace movement
             ////if character is grounded then...
             if (charC.isGrounded)
             {
-                //Debug.Log(charC.isGrounded);
+                Debug.Log(normSpeed);
                 moveDirection = new Vector3(h, 0, v);
                 //Move character within world space
                 moveDirection = transform.TransformDirection(moveDirection);
@@ -97,6 +98,11 @@ namespace movement
                 {
                     anim.SetBool("isWalking", true);
                 }
+                else
+                {
+                    anim.SetBool("isWalking", false);
+                }
+
 
                 //if input key is pressed then....
                 if (Input.GetKeyDown(KeyCode.Space))
@@ -105,6 +111,11 @@ namespace movement
                     moveDirection.y = jumpForce;
                     anim.SetBool("isJumping", true);
                 }
+                else
+                {
+                    anim.SetBool("isJumping", false);
+                }
+               
 
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
@@ -116,25 +127,27 @@ namespace movement
                 {
                     speed = normSpeed;
                     anim.SetBool("isRunning", false);
+                   
                 }
 
             }
             else
             {
-                anim.SetBool("isWalking", false);
-                anim.SetBool("isJumping", false);
-                anim.SetBool("isRunning", false);
+                //anim.SetBool("isWalking", false);
+               // anim.SetBool("isJumping", false);
+                //anim.SetBool("isRunning", false);
             }
 
             moveDirection.y -= gravityScale * Time.deltaTime;
             charC.Move(moveDirection * Time.deltaTime);
-            // Debug.Log(charC.isGrounded);
+
         }
 
         void PickObject()
         {
             //Ray rayCam = new Ray()
             Ray ray = new Ray(rayCastPost.transform.position, Camera.main.transform.forward);
+            Ray rayground = new Ray(transform.position, Vector3.down);
             RaycastHit hit;
             //   PickUp pick;
             if (Physics.Raycast(ray, out hit, rayDist))
@@ -160,6 +173,11 @@ namespace movement
             else
             {
                 ui.pickUI = false;
+            }
+
+            if (Physics.Raycast(rayground, out hit, 10f))
+            {
+              
             }
         }
     }

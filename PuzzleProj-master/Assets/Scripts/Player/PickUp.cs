@@ -22,7 +22,6 @@ public class PickUp : MonoBehaviour
         //If picked is true then....
         if (picked)
         {
-            Debug.Log(picked);
             
             GetComponent<Rigidbody>().isKinematic = true;
             transform.SetParent(player);
