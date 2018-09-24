@@ -58,22 +58,13 @@ namespace movement
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
             camOrbit.Look(mouseX, mouseY);
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Cursor.visible = true;
-            }
+          
             PlayerMovement();
 
             PickObject();
 
         }
 
-
-        //IEnumerator JumpDelay()
-        //{
-        //    yield return new WaitForSeconds(delay);
-        //}
 
         void PlayerMovement()
         {
@@ -105,23 +96,19 @@ namespace movement
 
 
                 //if input key is pressed then....
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButtonDown("Jump"))
                 {
                     //Apply jump force in y axis upon character
                     moveDirection.y = jumpForce;
-                    anim.SetBool("isJumping", true);
+                    anim.SetTrigger("Jump");
                 }
-                else
-                {
-                    anim.SetBool("isJumping", false);
-                }
-               
+
+                anim.SetFloat("JumpBlend", moveDirection.y);
 
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     speed = maxSpeed;
                     anim.SetBool("isRunning", true);
-                    anim.SetBool("isWalking", false);
                 }
                 else
                 {
@@ -133,9 +120,9 @@ namespace movement
             }
             else
             {
-                //anim.SetBool("isWalking", false);
-               // anim.SetBool("isJumping", false);
-                //anim.SetBool("isRunning", false);
+            //    anim.SetBool("isWalking", false);
+            //    anim.SetBool("isJumping", false);
+            //    anim.SetBool("isRunning", false);
             }
 
             moveDirection.y -= gravityScale * Time.deltaTime;
@@ -147,14 +134,13 @@ namespace movement
         {
             //Ray rayCam = new Ray()
             Ray ray = new Ray(rayCastPost.transform.position, Camera.main.transform.forward);
-            Ray rayground = new Ray(transform.position, Vector3.down);
+            //Ray rayground = new Ray(transform.position, Vector3.down);
             RaycastHit hit;
             //   PickUp pick;
             if (Physics.Raycast(ray, out hit, rayDist))
             {
                 PickUp pick = hit.collider.GetComponent<PickUp>();
                 TriggerMetPlat metPlat = hit.collider.GetComponent<TriggerMetPlat>();
-
                 //Debug.Log("Object Found");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -168,17 +154,17 @@ namespace movement
                         metPlat.actiSwitch = !metPlat.actiSwitch;
                     }
                 }
-                //ui.pickUI = !pick.picked;
+                if (pick)
+                {
+                    ui.pickUI = !pick.picked;
+                }
             }
             else
             {
                 ui.pickUI = false;
             }
 
-            if (Physics.Raycast(rayground, out hit, 10f))
-            {
-              
-            }
+
         }
     }
 }

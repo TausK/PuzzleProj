@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4289655731455894}
   - component: {fileID: 33843843980735990}
   - component: {fileID: 23485170079419864}
+  - component: {fileID: 65520835512120984}
   m_Layer: 0
   m_Name: BlackBoardBackWall
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732966524529558}
   m_Mesh: {fileID: 4300000, guid: 28a429cb9bf25544a963b53eb5543862, type: 3}
+--- !u!65 &65520835512120984
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732966524529558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.863647, y: 364, z: 740}
+  m_Center: {x: -3.0679321, y: -182, z: -370}
