@@ -51,6 +51,10 @@ public class Orbit : MonoBehaviour
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, camRadius);
+        
+        Ray camRay = new Ray(target.position, -transform.forward);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(camRay.origin, camRay.origin + camRay.direction * rayDistance);
     }
     void FixedUpdate()
     {
@@ -64,6 +68,7 @@ public class Orbit : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.SphereCast(camRay, camRadius, out hit, rayDistance, ~ignoreLayers, QueryTriggerInteraction.Ignore))
                 {
+                    print(hit.collider.name);
                     distance = hit.distance;
                     //return - exit the function
                     return;
