@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovingPlat : MonoBehaviour
 {
-    public GameObject player;
+
 
     //public GameObject daruma1;
     //public GameObject daruma2;
@@ -30,15 +30,12 @@ public class MovingPlat : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" ||other.tag ==  " Daruma")
+        if (other.tag == "Player" || other.tag == " Daruma")
         {
             other.transform.parent = transform;
         }
 
-        //if (other.tag == "Daruma")
-        //{
-        //    other.transform.parent = transform;
-        //}
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -48,15 +45,6 @@ public class MovingPlat : MonoBehaviour
         {
             other.transform.parent = null;
         }
-        //if (other.tag == "Player")
-        //{
-        //    other.transform.parent = null;
-        //}
 
-
-        //if (other.tag == "Daruma")
-        //{
-        //    other.transform.parent = null;
-        //}
     }
 }

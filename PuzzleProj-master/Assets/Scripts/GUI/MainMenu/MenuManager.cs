@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 1;
     }
     public void OK()
     {

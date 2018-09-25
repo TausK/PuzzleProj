@@ -9,11 +9,11 @@ namespace movement
 
     public class PlayerController : MonoBehaviour
     {
-        public PlayerController controller;
+        //public PlayerController controller;
         public GameObject rayCastPost;
-        public PickUI ui;
+        private PickUI ui;
         public Orbit camOrbit;
-        public Animator anim;
+        private Animator anim;
         public Vector3 origin;
 
         public float speed = 0.5f;
@@ -118,13 +118,6 @@ namespace movement
                 }
 
             }
-            else
-            {
-            //    anim.SetBool("isWalking", false);
-            //    anim.SetBool("isJumping", false);
-            //    anim.SetBool("isRunning", false);
-            }
-
             moveDirection.y -= gravityScale * Time.deltaTime;
             charC.Move(moveDirection * Time.deltaTime);
 
