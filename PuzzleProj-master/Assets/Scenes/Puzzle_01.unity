@@ -264,6 +264,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 644aa6632a2cf2c4d8ced9e2f965a581, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &56685744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4150837874958604, guid: 644aa6632a2cf2c4d8ced9e2f965a581,
+    type: 2}
+  m_PrefabInternal: {fileID: 56685743}
 --- !u!1 &57860058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1035,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 56685744}
     - target: {fileID: 1332246768204226, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
       propertyPath: m_Name
       value: LV1_Daruma_R (1)
@@ -1472,7 +1477,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.825
+      value: 3.123
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2905,7 +2910,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 56685744}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
   m_IsPrefabAsset: 0
@@ -5304,7 +5309,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 56685744}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb16259293a236a498831fb7dbe3582c, type: 2}
   m_IsPrefabAsset: 0
