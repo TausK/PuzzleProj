@@ -261,6 +261,11 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: 7d29567720d7d4c498fb6fa5a4ea7206,
         type: 2}
+    - target: {fileID: 143040826465711508, guid: 644aa6632a2cf2c4d8ced9e2f965a581,
+        type: 2}
+      propertyPath: m_Height
+      value: 0.19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 644aa6632a2cf2c4d8ced9e2f965a581, type: 2}
   m_IsPrefabAsset: 0
@@ -1477,31 +1482,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.123
+      value: 3.07
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.693
+      value: 0.67689
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.166
+      value: 1.105
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0060044182
+      value: 0.0060773906
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0021248457
+      value: -0.0019061291
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.53003985
+      value: -0.56038326
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.84794885
+      value: 0.828209
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_RootOrder
@@ -1509,7 +1514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -64.020004
+      value: -68.16801
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 656c848a85061fc4189f40d88783d259, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2763,6 +2768,36 @@ Prefab:
     - target: {fileID: 1100597111554518, guid: 8041da10b3b19a545ac278a244145067, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198714113493403488, guid: 8041da10b3b19a545ac278a244145067,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198714113493403488, guid: 8041da10b3b19a545ac278a244145067,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198714113493403488, guid: 8041da10b3b19a545ac278a244145067,
+        type: 2}
+      propertyPath: lengthInSec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198714113493403488, guid: 8041da10b3b19a545ac278a244145067,
+        type: 2}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198714113493403488, guid: 8041da10b3b19a545ac278a244145067,
+        type: 2}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198714113493403488, guid: 8041da10b3b19a545ac278a244145067,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8041da10b3b19a545ac278a244145067, type: 2}
@@ -4876,7 +4911,7 @@ GameObject:
   - component: {fileID: 1866775923}
   - component: {fileID: 1866775922}
   - component: {fileID: 1866775924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: polySurface31
   m_TagString: Untagged
   m_Icon: {fileID: 0}

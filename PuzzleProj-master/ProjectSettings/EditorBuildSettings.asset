@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle_02.unity
     guid: 2fe323553ec3e0343ac81dd695956065
+  - enabled: 1
+    path: Assets/Scenes/LoadScreen.unity
+    guid: 967b328b46ab26b479173365f1e8d7fa
   m_configObjects: {}
