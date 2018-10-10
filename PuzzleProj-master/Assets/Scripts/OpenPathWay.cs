@@ -8,8 +8,7 @@ public class OpenPathWay : MonoBehaviour
     public Animator anim;
     public GameObject gate;
     public GameObject panel;
-    public float delay = 0.5f;
-   
+    
     private void OnTriggerStay(Collider other)
     {
 
@@ -18,8 +17,6 @@ public class OpenPathWay : MonoBehaviour
             anim.SetBool("isOpen", true);
             panel.SetActive(true);
         }
-
-
     }
 
     private void OnTriggerExit(Collider other)
