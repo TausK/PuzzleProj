@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUI : MonoBehaviour
 {
     public bool pickUI;
-
+    public GUIStyle pickupUI;
     private float scrW, scrH;
     // Use this for initialization
     void Start()
@@ -24,7 +24,7 @@ public class PickUI : MonoBehaviour
 
         if (pickUI)
         {
-            GUI.Box(new Rect(8 * scrW, 4.5f * scrH, 1 * scrW, 0.5f * scrH), "E Pick Up");
+            GUI.Box(new Rect(8.5f * scrW, 4.5f * scrH, 1.5f * scrW, 0.5f * scrH), "", pickupUI);
         }
 
     }
