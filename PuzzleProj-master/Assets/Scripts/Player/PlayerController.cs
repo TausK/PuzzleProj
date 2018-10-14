@@ -31,7 +31,7 @@ namespace movement
         // private Rigidbody rb;
         private CharacterController charC;
 
-        public bool grounded;
+   
 
 
         // Use this for initialization
@@ -43,6 +43,7 @@ namespace movement
             charC = GetComponent<CharacterController>();
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+           
         }
 
         void OnDrawGizmos()
@@ -58,15 +59,19 @@ namespace movement
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
             camOrbit.Look(mouseX, mouseY);
-          
+
             PlayerMovement();
 
             PickObject();
 
         }
 
+        public void Sound()
+        {
+           
+        }
 
-        void PlayerMovement()
+        public void PlayerMovement()
         {
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
@@ -88,6 +93,7 @@ namespace movement
                 if (h >= 0.1 || h <= -0.1 || v >= 0.1 || v <= -0.1)
                 {
                     anim.SetBool("isWalking", true);
+                   
                 }
                 else
                 {
@@ -114,7 +120,7 @@ namespace movement
                 {
                     speed = normSpeed;
                     anim.SetBool("isRunning", false);
-                   
+
                 }
 
             }

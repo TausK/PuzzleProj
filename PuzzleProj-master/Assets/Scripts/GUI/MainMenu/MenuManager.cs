@@ -8,8 +8,13 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject firstPanel;
     public GameObject secondPanel;
+    public GameObject thirdPanel;
+    public GameObject fourthPanel;
+    public AudioSource audioS;
     private void Start()
     {
+        audioS = GetComponent<AudioSource>();
+        audioS.Play();
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1;
@@ -24,8 +29,19 @@ public class MenuManager : MonoBehaviour
     public void Play()
     {
         firstPanel.SetActive(false);
-        secondPanel.SetActive(true);
+        thirdPanel.SetActive(true);
+    }
 
+    public void Options()
+    {
+        firstPanel.SetActive(false);
+        secondPanel.SetActive(true);
+    }
+
+    public void Multiplayer()
+    {
+        thirdPanel.SetActive(false);
+        fourthPanel.SetActive(true);
     }
 
     public void Back()
@@ -33,6 +49,22 @@ public class MenuManager : MonoBehaviour
         firstPanel.SetActive(true);
         secondPanel.SetActive(false);
     }
+
+    public void Back2()
+    {
+
+        firstPanel.SetActive(true);
+        thirdPanel.SetActive(false);
+    }
+
+    public void Back3()
+    {
+
+        thirdPanel.SetActive(true);
+        fourthPanel.SetActive(false);
+    }
+
+
 
     public void Exit()
     {
