@@ -20,8 +20,8 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.25293696, g: 0.25854394, b: 0.26415092, a: 1}
-  m_AmbientEquatorColor: {r: 0.028301895, g: 0.026566401, b: 0.026566401, a: 1}
+  m_AmbientSkyColor: {r: 0.2509804, g: 0.25574228, b: 0.2627451, a: 1}
+  m_AmbientEquatorColor: {r: 0.4433962, g: 0.4203898, b: 0.4203898, a: 1}
   m_AmbientGroundColor: {r: 0.4339623, g: 0.3159191, b: 0.079832695, a: 1}
   m_AmbientIntensity: 0.5
   m_AmbientMode: 1
@@ -251,21 +251,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4150837874958604, guid: 644aa6632a2cf2c4d8ced9e2f965a581, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 143040826465711508, guid: 644aa6632a2cf2c4d8ced9e2f965a581,
         type: 2}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 7d29567720d7d4c498fb6fa5a4ea7206,
         type: 2}
-    - target: {fileID: 143040826465711508, guid: 644aa6632a2cf2c4d8ced9e2f965a581,
-        type: 2}
-      propertyPath: m_Height
-      value: 0.19
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 644aa6632a2cf2c4d8ced9e2f965a581, type: 2}
   m_IsPrefabAsset: 0
@@ -1372,8 +1363,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.005600228, y: -2.5479932, z: 0.018625883}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2046770375}
+  m_Children: []
   m_Father: {fileID: 2001928811}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2919,7 +2909,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4001646879384416, guid: 8041da10b3b19a545ac278a244145067, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.163752
+      value: -2.08
       objectReference: {fileID: 0}
     - target: {fileID: 4001646879384416, guid: 8041da10b3b19a545ac278a244145067, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3001,7 +2991,7 @@ Prefab:
     - target: {fileID: 198714113493403488, guid: 8041da10b3b19a545ac278a244145067,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.11372549
+      value: 0.07058824
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8041da10b3b19a545ac278a244145067, type: 2}
@@ -5583,72 +5573,6 @@ Transform:
   m_Father: {fileID: 2130420252}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2046770374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2046770375}
-  - component: {fileID: 2046770376}
-  m_Layer: 0
-  m_Name: Area Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2046770375
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2046770374}
-  m_LocalRotation: {x: 0.9999967, y: 0.0000001872529, z: 4.8040966e-10, w: -0.0025655576}
-  m_LocalPosition: {x: -0.803, y: 2.384, z: 0.633}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 488445995}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180.294, y: 0, z: -0.000015258789}
---- !u!108 &2046770376
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2046770374}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 3
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 2
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1.4434513, y: 1.6483152}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!4 &2067186069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4312158028454282, guid: c31589052c895134c9d3ebef700c45ba,

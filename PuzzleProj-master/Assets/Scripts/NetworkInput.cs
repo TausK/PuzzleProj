@@ -5,14 +5,14 @@ using UnityEngine.Networking;
 
 public class NetworkInput : NetworkBehaviour
 {
-    public PlayerController playerControl;
+    public movement.PlayerController playerControl;
     public Orbit cam;
 
     private void Start()
     {
         if (!isLocalPlayer)
         {
-            cam.gameObject.SetActive(false);
+           
         }
     }
 

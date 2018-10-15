@@ -68,7 +68,6 @@ public class Orbit : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.SphereCast(camRay, camRadius, out hit, rayDistance, ~ignoreLayers, QueryTriggerInteraction.Ignore))
                 {
-                    print(hit.collider.name);
                     distance = hit.distance;
                     //return - exit the function
                     return;
