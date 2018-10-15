@@ -84,8 +84,9 @@ GameObject:
   - component: {fileID: 143040826465711508}
   - component: {fileID: 114826654523761466}
   - component: {fileID: 114268544104642232}
-  - component: {fileID: 114193090543914000}
   - component: {fileID: 114983365850157090}
+  - component: {fileID: 114193090543914000}
+  - component: {fileID: 114652181664156348}
   m_Layer: 0
   m_Name: NetworkPlayer
   m_TagString: Player
@@ -1037,7 +1038,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044954011032810}
   m_LocalRotation: {x: -0, y: -0.7511165, z: -0, w: 0.6601698}
-  m_LocalPosition: {x: 9.038624, y: -3.1942353, z: 2.468576}
+  m_LocalPosition: {x: 0.8164021, y: 9.8628814e-18, z: -0.4441847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4587336617459370}
@@ -1932,7 +1933,7 @@ MonoBehaviour:
     i14: 184
     i15: 171
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114268544104642232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2012,6 +2013,27 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+--- !u!114 &114652181664156348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044954011032810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 4
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114826654523761466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2032,9 +2054,13 @@ MonoBehaviour:
   gravityScale: 3
   jumpForce: 1
   delay: 0.2
-  rayDist: 0.07
+  pickupRayDist: 0.13
+  groundRayDist: 0.05
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 0
   cam: {fileID: 4836689884762924}
-  grounded: 0
+  audioS: {fileID: 0}
 --- !u!114 &114983365850157090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2046,7 +2072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226237540fbba83458b61a3a7c4c3956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  playerControl: {fileID: 114826654523761466}
+  cam: {fileID: 114171771587753364}
 --- !u!137 &137021787533723334
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

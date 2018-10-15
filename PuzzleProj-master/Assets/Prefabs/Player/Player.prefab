@@ -1998,8 +1998,8 @@ MonoBehaviour:
   gravityScale: 3
   jumpForce: 1
   delay: 0.2
-  pickupRayDist: 1
-  groundRayDist: 0.02
+  pickupRayDist: 0.13
+  groundRayDist: 0.05
   ignoreLayers:
     serializedVersion: 2
     m_Bits: 0

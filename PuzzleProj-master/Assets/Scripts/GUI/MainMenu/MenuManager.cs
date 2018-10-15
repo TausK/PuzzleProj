@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
 public class MenuManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class MenuManager : MonoBehaviour
     public GameObject secondPanel;
     public GameObject thirdPanel;
     public GameObject fourthPanel;
+
+    public NetworkManager network;
+
     public AudioSource audioS;
     private void Start()
     {
@@ -42,6 +46,7 @@ public class MenuManager : MonoBehaviour
     {
         thirdPanel.SetActive(false);
         fourthPanel.SetActive(true);
+       
     }
 
     public void Back()
@@ -62,6 +67,7 @@ public class MenuManager : MonoBehaviour
 
         thirdPanel.SetActive(true);
         fourthPanel.SetActive(false);
+        
     }
 
 
