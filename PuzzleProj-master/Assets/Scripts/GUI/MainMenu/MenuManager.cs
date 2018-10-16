@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
+
+
 public class MenuManager : MonoBehaviour
 {
     public GameObject firstPanel;
@@ -13,6 +15,7 @@ public class MenuManager : MonoBehaviour
     public GameObject fourthPanel;
 
     public NetworkManager network;
+    public NetworkManagerHUD hud;
 
     public AudioSource audioS;
     private void Start()
@@ -46,7 +49,7 @@ public class MenuManager : MonoBehaviour
     {
         thirdPanel.SetActive(false);
         fourthPanel.SetActive(true);
-       
+        hud.showGUI = true;
     }
 
     public void Back()

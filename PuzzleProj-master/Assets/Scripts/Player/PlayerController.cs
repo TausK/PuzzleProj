@@ -33,7 +33,7 @@ namespace movement
         // private Rigidbody rb;
         private CharacterController charC;
         public AudioSource audioS;
-   
+
 
 
         // Use this for initialization
@@ -45,7 +45,6 @@ namespace movement
             charC = GetComponent<CharacterController>();
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-
             audioS = GetComponent<AudioSource>();
         }
 
@@ -74,6 +73,7 @@ namespace movement
 
         public void Sound()
         {
+           
             audioS.Play();
         }
         

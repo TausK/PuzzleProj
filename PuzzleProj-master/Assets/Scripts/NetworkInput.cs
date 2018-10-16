@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Animations;
 
 public class NetworkInput : NetworkBehaviour
 {
     public movement.PlayerController playerControl;
     public Orbit cam;
+    public Animator anim;
 
     private void Start()
     {
@@ -15,6 +17,7 @@ public class NetworkInput : NetworkBehaviour
         {
             //Diactivate camera
             cam.gameObject.SetActive(false);
+            playerControl.enabled = false;
         }
     }
 

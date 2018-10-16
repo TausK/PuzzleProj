@@ -216,11 +216,11 @@ RectTransform:
   m_Father: {fileID: 1568933784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 431.99994, y: -185.4}
-  m_SizeDelta: {x: 269.4, y: 132.3}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 269.40002, y: 132.3}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &179158124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,6 +1224,7 @@ MonoBehaviour:
   thirdPanel: {fileID: 897122430}
   fourthPanel: {fileID: 1632879853}
   network: {fileID: 1507936849}
+  hud: {fileID: 1507936848}
   audioS: {fileID: 0}
 --- !u!82 &1300329116
 AudioSource:
@@ -1543,6 +1544,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224318519731628176, guid: cd7629785fb40dc4ea835068a0106ba0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 155
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd7629785fb40dc4ea835068a0106ba0, type: 2}
   m_IsPrefabAsset: 0
@@ -1593,13 +1599,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507936846}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 227461547, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
-  showGUI: 1
+  showGUI: 0
   offsetX: 280
   offsetY: 90
 --- !u!114 &1507936849
@@ -1625,7 +1631,7 @@ MonoBehaviour:
   m_PlayerPrefab: {fileID: 1044954011032810, guid: fc6584bd9d985bd438e28315697eb8ab,
     type: 2}
   m_AutoCreatePlayer: 1
-  m_PlayerSpawnMethod: 0
+  m_PlayerSpawnMethod: 1
   m_OfflineScene: MainMenu
   m_OnlineScene: Anim_Test
   m_SpawnPrefabs: []
@@ -1927,11 +1933,11 @@ RectTransform:
   m_Father: {fileID: 1632879854}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 383.88, y: -255}
-  m_SizeDelta: {x: 212.7, y: 110.7}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 212.70001, y: 110.7}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &2140315447
 MonoBehaviour:
   m_ObjectHideFlags: 0
